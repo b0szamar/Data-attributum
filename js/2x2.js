@@ -1,7 +1,18 @@
+const szinek = ["", "", "", ""];
+let szin = "red";
 
-function changeColor(color) {
-    document.body.style.backgroundColor = color;
+function changeColor(element) {
+  const index = element.dataset.indexNumber - 1;
+  if (szinek[index] == "") {
+    element.style.backgroundColor = szin;
+    szinek[index] = szin;
+    szin = szin == "red" ? "blue" : "red";
+  }
 }
-window.addEventListener("load",function() { changeColor('red') })
-let index = document.getElementById("item").dataset.indexNumber;
-
+document.querySelectorAll(".item").forEach(item => 
+{
+    item.addEventListener("click", function() 
+    {
+    changeColor(this);
+    });
+});

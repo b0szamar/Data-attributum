@@ -14,5 +14,8 @@ border-radius: 10px;
     grid-template-columns: 25% 25% 25% 25%;
     height: 300px;
     width: 300px;
-    background-color: aqua;
+    background-color: lightblue;
+}
+body{
+    background-color: black;
 }
